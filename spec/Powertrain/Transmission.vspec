@@ -16,7 +16,17 @@
 Type:
   datatype: string
   type: attribute
-  allowed: ['UNKNOWN', 'SEQUENTIAL', 'H', 'AUTOMATIC', 'DSG', 'CVT']
+  allowed: [
+    'UNKNOWN',
+    'SEQUENTIAL',
+    'H',
+    'AUTOMATIC',
+    'DSG',           # Manufacturer designation of a dual clutch transmission, kept for compatibility
+    'CVT',
+    'DCT',           # Dual clutch transmission
+    'AMT',           # Automated manual transmission, a manual gearbox with automated clutch and shifting
+    'DIRECT_DRIVE'   # No selectable gear ratio, such as the single speed reduction gear of most battery electric vehicles
+    ]
   default: 'UNKNOWN'
   description: Transmission type.
 
