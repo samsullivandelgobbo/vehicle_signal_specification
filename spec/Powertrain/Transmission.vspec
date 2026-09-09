@@ -30,9 +30,18 @@ GearCount:
 DriveType:
   datatype: string
   type: attribute
-  allowed: ['UNKNOWN', 'FORWARD_WHEEL_DRIVE', 'REAR_WHEEL_DRIVE', 'ALL_WHEEL_DRIVE']
+  allowed: [
+    'UNKNOWN',
+    'FORWARD_WHEEL_DRIVE',
+    'REAR_WHEEL_DRIVE',
+    'ALL_WHEEL_DRIVE',   # All axles driven permanently, or engaged automatically without driver selection
+    'FOUR_WHEEL_DRIVE'   # All axles driven when engaged by the driver, typically through a transfer case
+    ]
   default: 'UNKNOWN'
   description: Drive type.
+  comment: ALL_WHEEL_DRIVE and FOUR_WHEEL_DRIVE are distinct in registration and type data.
+           A vehicle whose driven axles are selected by the driver is FOUR_WHEEL_DRIVE
+           even if all axles are driven while engaged.
 
 
 #
